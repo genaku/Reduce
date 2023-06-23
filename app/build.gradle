@@ -24,11 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
@@ -38,12 +38,13 @@ android {
             useJUnitPlatform()
         }
     }
+    namespace 'com.genaku.reduce'
 }
 
 dependencies {
 
-//    implementation "com.github.genaku.Reduce:reduce-core:0.9.3"
-//    implementation "com.github.genaku.Reduce:reduce-ext:0.9.3"
+//    implementation "com.github.genaku.Reduce:reduce-core:0.9.9"
+//    implementation "com.github.genaku.Reduce:reduce-ext:0.9.9"
     implementation(project(":reduce-core"))
     implementation(project(':reduce-ext'))
 
