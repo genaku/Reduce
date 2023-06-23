@@ -28,18 +28,18 @@ class SuspendKnotImpl<S : State, C : StateIntent, A : StateAction>(
                 effect.state
             }
             newActions.forEach {
-                _actionsChannel.offer(it)
+                _actionsChannel.send(it)
             }
         }
         _actionsJob = coroutineScope.observeWith {
             val action = _actionsChannel.receive()
             val intent = performer.invoke(action)
-            intent?.run { _intentsChannel.offer(intent) }
+            intent?.run { _intentsChannel.send(intent) }
         }
     }
 
     override fun offerIntent(intent: C) {
-        _intentsChannel.offer(intent)
+        _intentsChannel.trySend(intent)
     }
 
     override fun stop() {
