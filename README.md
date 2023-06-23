@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/genaku/reduce.svg)](https://jitpack.io/#genaku/reduce) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![](https://jitpack.io/v/genaku/Reduce.svg)](https://jitpack.io/#genaku/Reduce) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # Reduce
 
