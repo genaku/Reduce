@@ -4,8 +4,8 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "33.0.0"
+    compileSdk 33
+    buildToolsVersion = "33.0.1"
 
     defaultConfig {
         applicationId "com.genaku.reduce"
@@ -52,19 +52,19 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
-    implementation 'androidx.fragment:fragment-ktx:1.6.0'
+    implementation 'androidx.fragment:fragment-ktx:1.6.1'
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2'
     implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.4.4'
 //    implementation 'com.github.hoc081098:ViewBindingDelegate:1.0.0-alpha03'
     implementation "com.github.genaku.Android-PLog:plog-core:2.0.3"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
-    testImplementation 'io.kotest:kotest-runner-junit5:4.4.3'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
+    testImplementation 'io.kotest:kotest-runner-junit5:4.6.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.2'
     testImplementation 'app.cash.turbine:turbine:0.4.1'
     testImplementation 'junit:junit:4.13.2'
     testImplementation "io.mockk:mockk:1.12.1"
