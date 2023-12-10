@@ -1,8 +1,8 @@
 package com.genaku.reducex
 
-import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import com.genaku.reduce.JobSwitcher
 
-fun JobSwitcher.connectTo(lifecycle: Lifecycle) {
-    lifecycle.addObserver(KnotLifecycleObserver(lifecycle, this))
+fun JobSwitcher.connectTo(owner: LifecycleOwner) {
+    owner.lifecycle.addObserver(KnotLifecycleObserver(this))
 }
