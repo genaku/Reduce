@@ -51,8 +51,7 @@ class SuspendKnotImpl<S : State, C : StateIntent, A : StateAction>(
 
     private fun CoroutineScope.observeWith(block: suspend () -> Unit) =
         launch(context = dispatcher) {
-            while (true) {
-                ensureActive()
+            while (isActive) {
                 block()
             }
         }
