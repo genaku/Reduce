@@ -12,7 +12,6 @@ class EasySuspendCoroutineKnotBuilder<S : State, C : StateIntent> :
             knotState = _knotState ?: createKnotState(),
             reducer = checkNotNull(_reducer) { "reduce {  } must be declared" },
             performer = _performer ?: _defaultPerformer,
-            dispatcher = _dispatcher
         )
     }
 
