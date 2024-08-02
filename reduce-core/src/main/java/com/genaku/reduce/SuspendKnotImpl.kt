@@ -8,7 +8,6 @@ class SuspendKnotImpl<S : State, C : StateIntent, A : StateAction>(
     private val knotState: CoroutineKnotState<S>,
     private val reducer: SuspendReducer<S, C, A>,
     private val performer: SuspendPerformer<A, C>,
-    private val dispatcher: CoroutineContext = Dispatchers.Default
 ) : Knot<S, C>, JobSwitcher, KnotState<S> by knotState {
 
     private val _intentsChannel = Channel<C>(Channel.UNLIMITED)
@@ -50,7 +49,7 @@ class SuspendKnotImpl<S : State, C : StateIntent, A : StateAction>(
     }
 
     private fun CoroutineScope.observeWith(block: suspend () -> Unit) =
-        launch(context = dispatcher) {
+        launch {
             while (isActive) {
                 block()
             }
